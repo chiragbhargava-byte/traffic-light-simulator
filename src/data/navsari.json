@@ -1,0 +1,2484 @@
+{
+  "version": 0.6,
+  "generator": "Static OpenStreetMap Snapshot - Navsari Municipal Corporation (PS000073)",
+  "osm3s": {
+    "timestamp_osm_base": "2026-03-15T10:00:00Z",
+    "copyright": "© OpenStreetMap contributors"
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 10001,
+      "lat": 20.9465,
+      "lon": 72.928,
+      "tags": {
+        "highway": "traffic_signals",
+        "name": "Fuwara Chowk (Sayaji Vaibhav)",
+        "name:gu": "ફુવારા ચોક",
+        "junction:type": "crossroads",
+        "ref": "NMC-SIG-1"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20001,
+      "lat": 20.947218652227296,
+      "lon": 72.928
+    },
+    {
+      "type": "node",
+      "id": 20002,
+      "lat": 20.94793730445459,
+      "lon": 72.928
+    },
+    {
+      "type": "way",
+      "id": 50001,
+      "nodes": [
+        10001,
+        20001,
+        20002
+      ],
+      "tags": {
+        "highway": "primary",
+        "name": "Shree Sayaji Road",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "N"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20003,
+      "lat": 20.945781347772705,
+      "lon": 72.928
+    },
+    {
+      "type": "node",
+      "id": 20004,
+      "lat": 20.94506269554541,
+      "lon": 72.928
+    },
+    {
+      "type": "way",
+      "id": 50002,
+      "nodes": [
+        10001,
+        20003,
+        20004
+      ],
+      "tags": {
+        "highway": "primary",
+        "name": "Clock Tower Road",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "S"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20005,
+      "lat": 20.9465,
+      "lon": 72.92876950525448
+    },
+    {
+      "type": "node",
+      "id": 20006,
+      "lat": 20.9465,
+      "lon": 72.92953901050898
+    },
+    {
+      "type": "way",
+      "id": 50003,
+      "nodes": [
+        10001,
+        20005,
+        20006
+      ],
+      "tags": {
+        "highway": "secondary",
+        "name": "Junathana Road",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "E"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20007,
+      "lat": 20.9465,
+      "lon": 72.92723049474552
+    },
+    {
+      "type": "node",
+      "id": 20008,
+      "lat": 20.9465,
+      "lon": 72.92646098949102
+    },
+    {
+      "type": "way",
+      "id": 50004,
+      "nodes": [
+        10001,
+        20007,
+        20008
+      ],
+      "tags": {
+        "highway": "secondary",
+        "name": "Station Road",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "W"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20009,
+      "lat": 20.947191702768773,
+      "lon": 72.92743248987482
+    },
+    {
+      "type": "node",
+      "id": 20010,
+      "lat": 20.947191702768773,
+      "lon": 72.92770181671388
+    },
+    {
+      "type": "node",
+      "id": 20011,
+      "lat": 20.946886275572172,
+      "lon": 72.92770181671388
+    },
+    {
+      "type": "node",
+      "id": 20012,
+      "lat": 20.946886275572172,
+      "lon": 72.92743248987482
+    },
+    {
+      "type": "way",
+      "id": 50005,
+      "nodes": [
+        20009,
+        20010,
+        20011,
+        20012,
+        20009
+      ],
+      "tags": {
+        "building": "civic",
+        "name": "Sayaji Vaibhav Library",
+        "building:levels": "3",
+        "height": "10.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20013,
+      "lat": 20.947110854393202,
+      "lon": 72.92832703973315
+    },
+    {
+      "type": "node",
+      "id": 20014,
+      "lat": 20.947110854393202,
+      "lon": 72.92863484183495
+    },
+    {
+      "type": "node",
+      "id": 20015,
+      "lat": 20.94687729241933,
+      "lon": 72.92863484183495
+    },
+    {
+      "type": "node",
+      "id": 20016,
+      "lat": 20.94687729241933,
+      "lon": 72.92832703973315
+    },
+    {
+      "type": "way",
+      "id": 50006,
+      "nodes": [
+        20013,
+        20014,
+        20015,
+        20016,
+        20013
+      ],
+      "tags": {
+        "building": "civic",
+        "name": "Municipal Ward Office",
+        "building:levels": "4",
+        "height": "14",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20017,
+      "lat": 20.94620804753266,
+      "lon": 72.92732668290232
+    },
+    {
+      "type": "node",
+      "id": 20018,
+      "lat": 20.94620804753266,
+      "lon": 72.92761524737276
+    },
+    {
+      "type": "node",
+      "id": 20019,
+      "lat": 20.945893637183218,
+      "lon": 72.92761524737276
+    },
+    {
+      "type": "node",
+      "id": 20020,
+      "lat": 20.945893637183218,
+      "lon": 72.92732668290232
+    },
+    {
+      "type": "way",
+      "id": 50007,
+      "nodes": [
+        20017,
+        20018,
+        20019,
+        20020,
+        20017
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Navsari Central Bank Commercial Complex",
+        "building:levels": "5",
+        "height": "17.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20021,
+      "lat": 20.9461945728034,
+      "lon": 72.92824047039203
+    },
+    {
+      "type": "node",
+      "id": 20022,
+      "lat": 20.9461945728034,
+      "lon": 72.92862522301927
+    },
+    {
+      "type": "node",
+      "id": 20023,
+      "lat": 20.945996943440893,
+      "lon": 72.92862522301927
+    },
+    {
+      "type": "node",
+      "id": 20024,
+      "lat": 20.945996943440893,
+      "lon": 72.92824047039203
+    },
+    {
+      "type": "way",
+      "id": 50008,
+      "nodes": [
+        20021,
+        20022,
+        20023,
+        20024,
+        20021
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Tower Bazaar Shops",
+        "building:levels": "2",
+        "height": "7",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20025,
+      "lat": 20.94694915764206,
+      "lon": 72.9271102595495
+    },
+    {
+      "type": "node",
+      "id": 20026,
+      "lat": 20.94694915764206,
+      "lon": 72.92735072994152
+    },
+    {
+      "type": "node",
+      "id": 20027,
+      "lat": 20.946679663056823,
+      "lon": 72.92735072994152
+    },
+    {
+      "type": "node",
+      "id": 20028,
+      "lat": 20.946679663056823,
+      "lon": 72.9271102595495
+    },
+    {
+      "type": "way",
+      "id": 50009,
+      "nodes": [
+        20025,
+        20026,
+        20027,
+        20028,
+        20025
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Diamond Plaza",
+        "building:levels": "4",
+        "height": "14",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20029,
+      "lat": 20.94746119735401,
+      "lon": 72.92858674775654
+    },
+    {
+      "type": "node",
+      "id": 20030,
+      "lat": 20.94746119735401,
+      "lon": 72.92885607459561
+    },
+    {
+      "type": "node",
+      "id": 20031,
+      "lat": 20.947245601685818,
+      "lon": 72.92885607459561
+    },
+    {
+      "type": "node",
+      "id": 20032,
+      "lat": 20.947245601685818,
+      "lon": 72.92858674775654
+    },
+    {
+      "type": "way",
+      "id": 50010,
+      "nodes": [
+        20029,
+        20030,
+        20031,
+        20032,
+        20029
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Shantiniketan Apartment",
+        "building:levels": "6",
+        "height": "21",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20033,
+      "lat": 20.945781347772705,
+      "lon": 72.92755753447867
+    },
+    {
+      "type": "node",
+      "id": 20034,
+      "lat": 20.945781347772705,
+      "lon": 72.92776914842365
+    },
+    {
+      "type": "node",
+      "id": 20035,
+      "lat": 20.945601684715882,
+      "lon": 72.92776914842365
+    },
+    {
+      "type": "node",
+      "id": 20036,
+      "lat": 20.945601684715882,
+      "lon": 72.92755753447867
+    },
+    {
+      "type": "way",
+      "id": 50011,
+      "nodes": [
+        20033,
+        20034,
+        20035,
+        20036,
+        20033
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Khadi Bhavan Store",
+        "building:levels": "2",
+        "height": "7",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20037,
+      "lat": 20.945862196148276,
+      "lon": 72.9284039902586
+    },
+    {
+      "type": "node",
+      "id": 20038,
+      "lat": 20.945862196148276,
+      "lon": 72.92875026762312
+    },
+    {
+      "type": "node",
+      "id": 20039,
+      "lat": 20.94561066786872,
+      "lon": 72.92875026762312
+    },
+    {
+      "type": "node",
+      "id": 20040,
+      "lat": 20.94561066786872,
+      "lon": 72.9284039902586
+    },
+    {
+      "type": "way",
+      "id": 50012,
+      "nodes": [
+        20037,
+        20038,
+        20039,
+        20040,
+        20037
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Heritage Heritage Clock Arcade",
+        "building:levels": "3",
+        "height": "10.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20041,
+      "lat": 20.946077791816464,
+      "lon": 72.92699002435349
+    },
+    {
+      "type": "node",
+      "id": 20042,
+      "lat": 20.946077791816464,
+      "lon": 72.92727858882391
+    },
+    {
+      "type": "node",
+      "id": 20043,
+      "lat": 20.945844229842592,
+      "lon": 72.92727858882391
+    },
+    {
+      "type": "node",
+      "id": 20044,
+      "lat": 20.945844229842592,
+      "lon": 72.92699002435349
+    },
+    {
+      "type": "way",
+      "id": 50013,
+      "nodes": [
+        20041,
+        20042,
+        20043,
+        20044,
+        20041
+      ],
+      "tags": {
+        "building": "hospital",
+        "name": "Navsari General Clinic",
+        "building:levels": "3",
+        "height": "10.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20045,
+      "lat": 20.946329320096016,
+      "lon": 72.92879836170152
+    },
+    {
+      "type": "node",
+      "id": 20046,
+      "lat": 20.946329320096016,
+      "lon": 72.92902921327787
+    },
+    {
+      "type": "node",
+      "id": 20047,
+      "lat": 20.9460418592051,
+      "lon": 72.92902921327787
+    },
+    {
+      "type": "node",
+      "id": 20048,
+      "lat": 20.9460418592051,
+      "lon": 72.92879836170152
+    },
+    {
+      "type": "way",
+      "id": 50014,
+      "nodes": [
+        20045,
+        20046,
+        20047,
+        20048,
+        20045
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Mehta Commercial Chambers",
+        "building:levels": "4",
+        "height": "14",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10002,
+      "lat": 20.9525,
+      "lon": 72.9185,
+      "tags": {
+        "highway": "traffic_signals",
+        "name": "Lunsikui Char Rasta",
+        "name:gu": "લુન્સીકુઇ ચાર રસ્તા",
+        "junction:type": "crossroads",
+        "ref": "NMC-SIG-2"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20049,
+      "lat": 20.953218652227296,
+      "lon": 72.9185
+    },
+    {
+      "type": "node",
+      "id": 20050,
+      "lat": 20.95393730445459,
+      "lon": 72.9185
+    },
+    {
+      "type": "way",
+      "id": 50015,
+      "nodes": [
+        10002,
+        20049,
+        20050
+      ],
+      "tags": {
+        "highway": "primary",
+        "name": "Dandia Bazaar Road",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "N"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20051,
+      "lat": 20.951781347772705,
+      "lon": 72.9185
+    },
+    {
+      "type": "node",
+      "id": 20052,
+      "lat": 20.95106269554541,
+      "lon": 72.9185
+    },
+    {
+      "type": "way",
+      "id": 50016,
+      "nodes": [
+        10002,
+        20051,
+        20052
+      ],
+      "tags": {
+        "highway": "primary",
+        "name": "Jalalpur Main Road",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "S"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20053,
+      "lat": 20.9525,
+      "lon": 72.91926953610633
+    },
+    {
+      "type": "node",
+      "id": 20054,
+      "lat": 20.9525,
+      "lon": 72.92003907221265
+    },
+    {
+      "type": "way",
+      "id": 50017,
+      "nodes": [
+        10002,
+        20053,
+        20054
+      ],
+      "tags": {
+        "highway": "secondary",
+        "name": "Vijalpor Access Road",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "E"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20055,
+      "lat": 20.9525,
+      "lon": 72.91773046389366
+    },
+    {
+      "type": "node",
+      "id": 20056,
+      "lat": 20.9525,
+      "lon": 72.91696092778734
+    },
+    {
+      "type": "way",
+      "id": 50018,
+      "nodes": [
+        10002,
+        20055,
+        20056
+      ],
+      "tags": {
+        "highway": "secondary",
+        "name": "Garda College Road",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "W"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20057,
+      "lat": 20.953299500602867,
+      "lon": 72.91772084469234
+    },
+    {
+      "type": "node",
+      "id": 20058,
+      "lat": 20.953299500602867,
+      "lon": 72.91812485114816
+    },
+    {
+      "type": "node",
+      "id": 20059,
+      "lat": 20.9529581407949,
+      "lon": 72.91812485114816
+    },
+    {
+      "type": "node",
+      "id": 20060,
+      "lat": 20.9529581407949,
+      "lon": 72.91772084469234
+    },
+    {
+      "type": "way",
+      "id": 50019,
+      "nodes": [
+        20057,
+        20058,
+        20059,
+        20060,
+        20057
+      ],
+      "tags": {
+        "building": "school",
+        "name": "B.P. Baria Science Institute",
+        "building:levels": "4",
+        "height": "14",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20061,
+      "lat": 20.953151278580986,
+      "lon": 72.91895691206312
+    },
+    {
+      "type": "node",
+      "id": 20062,
+      "lat": 20.953151278580986,
+      "lon": 72.91929358410965
+    },
+    {
+      "type": "node",
+      "id": 20063,
+      "lat": 20.952926699759956,
+      "lon": 72.91929358410965
+    },
+    {
+      "type": "node",
+      "id": 20064,
+      "lat": 20.952926699759956,
+      "lon": 72.91895691206312
+    },
+    {
+      "type": "way",
+      "id": 50020,
+      "nodes": [
+        20061,
+        20062,
+        20063,
+        20064,
+        20061
+      ],
+      "tags": {
+        "building": "civic",
+        "name": "Lunsikui Sports Pavilion",
+        "building:levels": "2",
+        "height": "7",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20065,
+      "lat": 20.95214067388635,
+      "lon": 72.91758617587372
+    },
+    {
+      "type": "node",
+      "id": 20066,
+      "lat": 20.95214067388635,
+      "lon": 72.91797094392689
+    },
+    {
+      "type": "node",
+      "id": 20067,
+      "lat": 20.95187117930112,
+      "lon": 72.91797094392689
+    },
+    {
+      "type": "node",
+      "id": 20068,
+      "lat": 20.95187117930112,
+      "lon": 72.91758617587372
+    },
+    {
+      "type": "way",
+      "id": 50021,
+      "nodes": [
+        20065,
+        20066,
+        20067,
+        20068,
+        20065
+      ],
+      "tags": {
+        "building": "school",
+        "name": "S.B. Garda Arts College Wing",
+        "building:levels": "3",
+        "height": "10.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20069,
+      "lat": 20.952032876052257,
+      "lon": 72.91883667204651
+    },
+    {
+      "type": "node",
+      "id": 20070,
+      "lat": 20.952032876052257,
+      "lon": 72.91912524808639
+    },
+    {
+      "type": "node",
+      "id": 20071,
+      "lat": 20.951799314078386,
+      "lon": 72.91912524808639
+    },
+    {
+      "type": "node",
+      "id": 20072,
+      "lat": 20.951799314078386,
+      "lon": 72.91883667204651
+    },
+    {
+      "type": "way",
+      "id": 50022,
+      "nodes": [
+        20069,
+        20070,
+        20071,
+        20072,
+        20069
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Gymkhana Club House",
+        "building:levels": "2",
+        "height": "7",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20073,
+      "lat": 20.952926699759956,
+      "lon": 72.91746112625646
+    },
+    {
+      "type": "node",
+      "id": 20074,
+      "lat": 20.952926699759956,
+      "lon": 72.917711225491
+    },
+    {
+      "type": "node",
+      "id": 20075,
+      "lat": 20.952522457882104,
+      "lon": 72.917711225491
+    },
+    {
+      "type": "node",
+      "id": 20076,
+      "lat": 20.952522457882104,
+      "lon": 72.91746112625646
+    },
+    {
+      "type": "way",
+      "id": 50023,
+      "nodes": [
+        20073,
+        20074,
+        20075,
+        20076,
+        20073
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "College Road Shopping Arcade",
+        "building:levels": "3",
+        "height": "10.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20077,
+      "lat": 20.95360043622305,
+      "lon": 72.91912524808639
+    },
+    {
+      "type": "node",
+      "id": 20078,
+      "lat": 20.95360043622305,
+      "lon": 72.91941382412627
+    },
+    {
+      "type": "node",
+      "id": 20079,
+      "lat": 20.953375857402015,
+      "lon": 72.91941382412627
+    },
+    {
+      "type": "node",
+      "id": 20080,
+      "lat": 20.953375857402015,
+      "lon": 72.91912524808639
+    },
+    {
+      "type": "way",
+      "id": 50024,
+      "nodes": [
+        20077,
+        20078,
+        20079,
+        20080,
+        20077
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Green Park Residency Block A",
+        "building:levels": "5",
+        "height": "17.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20081,
+      "lat": 20.953299500602867,
+      "lon": 72.91943306252892
+    },
+    {
+      "type": "node",
+      "id": 20082,
+      "lat": 20.953299500602867,
+      "lon": 72.91968316176347
+    },
+    {
+      "type": "node",
+      "id": 20083,
+      "lat": 20.953047972323315,
+      "lon": 72.91968316176347
+    },
+    {
+      "type": "node",
+      "id": 20084,
+      "lat": 20.953047972323315,
+      "lon": 72.91943306252892
+    },
+    {
+      "type": "way",
+      "id": 50025,
+      "nodes": [
+        20081,
+        20082,
+        20083,
+        20084,
+        20081
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Green Park Residency Block B",
+        "building:levels": "5",
+        "height": "17.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20085,
+      "lat": 20.9529581407949,
+      "lon": 72.91875009923456
+    },
+    {
+      "type": "node",
+      "id": 20086,
+      "lat": 20.9529581407949,
+      "lon": 72.91898096006645
+    },
+    {
+      "type": "node",
+      "id": 20087,
+      "lat": 20.952760511432395,
+      "lon": 72.91898096006645
+    },
+    {
+      "type": "node",
+      "id": 20088,
+      "lat": 20.952760511432395,
+      "lon": 72.91875009923456
+    },
+    {
+      "type": "way",
+      "id": 50026,
+      "nodes": [
+        20085,
+        20086,
+        20087,
+        20088,
+        20085
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Lunsikui Corner Pharmacy & Labs",
+        "building:levels": "3",
+        "height": "10.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20089,
+      "lat": 20.95191609506532,
+      "lon": 72.91723026542455
+    },
+    {
+      "type": "node",
+      "id": 20090,
+      "lat": 20.95191609506532,
+      "lon": 72.91755731826974
+    },
+    {
+      "type": "node",
+      "id": 20091,
+      "lat": 20.951646600480085,
+      "lon": 72.91755731826974
+    },
+    {
+      "type": "node",
+      "id": 20092,
+      "lat": 20.951646600480085,
+      "lon": 72.91723026542455
+    },
+    {
+      "type": "way",
+      "id": 50027,
+      "nodes": [
+        20089,
+        20090,
+        20091,
+        20092,
+        20089
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Student Hostel Complex",
+        "building:levels": "4",
+        "height": "14",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10003,
+      "lat": 20.958,
+      "lon": 72.924,
+      "tags": {
+        "highway": "traffic_signals",
+        "name": "Station Chowk (Gole Bhav)",
+        "name:gu": "સ્ટેશન ચોક",
+        "junction:type": "crossroads",
+        "ref": "NMC-SIG-3"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20093,
+      "lat": 20.958718652227294,
+      "lon": 72.924
+    },
+    {
+      "type": "node",
+      "id": 20094,
+      "lat": 20.95943730445459,
+      "lon": 72.924
+    },
+    {
+      "type": "way",
+      "id": 50028,
+      "nodes": [
+        10003,
+        20093,
+        20094
+      ],
+      "tags": {
+        "highway": "primary",
+        "name": "Railway Colony Road",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "N"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20095,
+      "lat": 20.957281347772703,
+      "lon": 72.924
+    },
+    {
+      "type": "node",
+      "id": 20096,
+      "lat": 20.956562695545408,
+      "lon": 72.924
+    },
+    {
+      "type": "way",
+      "id": 50029,
+      "nodes": [
+        10003,
+        20095,
+        20096
+      ],
+      "tags": {
+        "highway": "primary",
+        "name": "Mota Bazaar Road",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "S"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20097,
+      "lat": 20.958,
+      "lon": 72.92476956439677
+    },
+    {
+      "type": "node",
+      "id": 20098,
+      "lat": 20.958,
+      "lon": 72.92553912879355
+    },
+    {
+      "type": "way",
+      "id": 50030,
+      "nodes": [
+        10003,
+        20097,
+        20098
+      ],
+      "tags": {
+        "highway": "secondary",
+        "name": "Shapoorji Pallonji Marg",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "E"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20099,
+      "lat": 20.958,
+      "lon": 72.92323043560324
+    },
+    {
+      "type": "node",
+      "id": 20100,
+      "lat": 20.958,
+      "lon": 72.92246087120647
+    },
+    {
+      "type": "way",
+      "id": 50031,
+      "nodes": [
+        10003,
+        20099,
+        20100
+      ],
+      "tags": {
+        "highway": "secondary",
+        "name": "Station Approach Road",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "W"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20101,
+      "lat": 20.95855695547615,
+      "lon": 72.92315347916356
+    },
+    {
+      "type": "node",
+      "id": 20102,
+      "lat": 20.95855695547615,
+      "lon": 72.9234997831421
+    },
+    {
+      "type": "node",
+      "id": 20103,
+      "lat": 20.958341359807964,
+      "lon": 72.9234997831421
+    },
+    {
+      "type": "node",
+      "id": 20104,
+      "lat": 20.958341359807964,
+      "lon": 72.92315347916356
+    },
+    {
+      "type": "way",
+      "id": 50032,
+      "nodes": [
+        20101,
+        20102,
+        20103,
+        20104,
+        20101
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Western Railway Parcel Office",
+        "building:levels": "2",
+        "height": "7",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20105,
+      "lat": 20.957829320096014,
+      "lon": 72.9229033707346
+    },
+    {
+      "type": "node",
+      "id": 20106,
+      "lat": 20.957829320096014,
+      "lon": 72.92336510937267
+    },
+    {
+      "type": "node",
+      "id": 20107,
+      "lat": 20.957541859205097,
+      "lon": 72.92336510937267
+    },
+    {
+      "type": "node",
+      "id": 20108,
+      "lat": 20.957541859205097,
+      "lon": 72.9229033707346
+    },
+    {
+      "type": "way",
+      "id": 50033,
+      "nodes": [
+        20105,
+        20106,
+        20107,
+        20108,
+        20105
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Navsari Railway Terminal East Wing",
+        "building:levels": "3",
+        "height": "10.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20109,
+      "lat": 20.958673736463087,
+      "lon": 72.92437516264343
+    },
+    {
+      "type": "node",
+      "id": 20110,
+      "lat": 20.958673736463087,
+      "lon": 72.92468298840214
+    },
+    {
+      "type": "node",
+      "id": 20111,
+      "lat": 20.95840424187785,
+      "lon": 72.92468298840214
+    },
+    {
+      "type": "node",
+      "id": 20112,
+      "lat": 20.95840424187785,
+      "lon": 72.92437516264343
+    },
+    {
+      "type": "way",
+      "id": 50034,
+      "nodes": [
+        20109,
+        20110,
+        20111,
+        20112,
+        20109
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Hotel Royal Palace Station",
+        "building:levels": "5",
+        "height": "17.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20113,
+      "lat": 20.95755982551078,
+      "lon": 72.92422124976407
+    },
+    {
+      "type": "node",
+      "id": 20114,
+      "lat": 20.95755982551078,
+      "lon": 72.9246445101823
+    },
+    {
+      "type": "node",
+      "id": 20115,
+      "lat": 20.95727236461986,
+      "lon": 72.9246445101823
+    },
+    {
+      "type": "node",
+      "id": 20116,
+      "lat": 20.95727236461986,
+      "lon": 72.92422124976407
+    },
+    {
+      "type": "way",
+      "id": 50035,
+      "nodes": [
+        20113,
+        20114,
+        20115,
+        20116,
+        20113
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Mota Bazaar Textile Market",
+        "building:levels": "3",
+        "height": "10.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20117,
+      "lat": 20.9587635679915,
+      "lon": 72.92346130492227
+    },
+    {
+      "type": "node",
+      "id": 20118,
+      "lat": 20.9587635679915,
+      "lon": 72.92367293513138
+    },
+    {
+      "type": "node",
+      "id": 20119,
+      "lat": 20.958583904934677,
+      "lon": 72.92367293513138
+    },
+    {
+      "type": "node",
+      "id": 20120,
+      "lat": 20.958583904934677,
+      "lon": 72.92346130492227
+    },
+    {
+      "type": "way",
+      "id": 50036,
+      "nodes": [
+        20117,
+        20118,
+        20119,
+        20120,
+        20117
+      ],
+      "tags": {
+        "building": "civic",
+        "name": "Railway Police Outpost",
+        "building:levels": "2",
+        "height": "7",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20121,
+      "lat": 20.957829320096014,
+      "lon": 72.92444249952815
+    },
+    {
+      "type": "node",
+      "id": 20122,
+      "lat": 20.957829320096014,
+      "lon": 72.92471184706702
+    },
+    {
+      "type": "node",
+      "id": 20123,
+      "lat": 20.95763169073351,
+      "lon": 72.92471184706702
+    },
+    {
+      "type": "node",
+      "id": 20124,
+      "lat": 20.95763169073351,
+      "lon": 72.92444249952815
+    },
+    {
+      "type": "way",
+      "id": 50037,
+      "nodes": [
+        20121,
+        20122,
+        20123,
+        20124,
+        20121
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Station Tea & Travel Plaza",
+        "building:levels": "2",
+        "height": "7",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20125,
+      "lat": 20.958965688930427,
+      "lon": 72.92469741773458
+    },
+    {
+      "type": "node",
+      "id": 20126,
+      "lat": 20.958965688930427,
+      "lon": 72.92493790660858
+    },
+    {
+      "type": "node",
+      "id": 20127,
+      "lat": 20.958651278580984,
+      "lon": 72.92493790660858
+    },
+    {
+      "type": "node",
+      "id": 20128,
+      "lat": 20.958651278580984,
+      "lon": 72.92469741773458
+    },
+    {
+      "type": "way",
+      "id": 50038,
+      "nodes": [
+        20125,
+        20126,
+        20127,
+        20128,
+        20125
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Surat-Navsari Commuter Lodge",
+        "building:levels": "4",
+        "height": "14",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20129,
+      "lat": 20.957362196148274,
+      "lon": 72.92344687558983
+    },
+    {
+      "type": "node",
+      "id": 20130,
+      "lat": 20.957362196148274,
+      "lon": 72.92378356001342
+    },
+    {
+      "type": "node",
+      "id": 20131,
+      "lat": 20.95711066786872,
+      "lon": 72.92378356001342
+    },
+    {
+      "type": "node",
+      "id": 20132,
+      "lat": 20.95711066786872,
+      "lon": 72.92344687558983
+    },
+    {
+      "type": "way",
+      "id": 50039,
+      "nodes": [
+        20129,
+        20130,
+        20131,
+        20132,
+        20129
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Sardar Vallabhbhai Patel Commercial Hub",
+        "building:levels": "5",
+        "height": "17.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10004,
+      "lat": 20.9415,
+      "lon": 72.933,
+      "tags": {
+        "highway": "traffic_signals",
+        "name": "Junathana Char Rasta",
+        "name:gu": "જૂનાથાણા ચાર રસ્તા",
+        "junction:type": "crossroads",
+        "ref": "NMC-SIG-4"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20133,
+      "lat": 20.942218652227297,
+      "lon": 72.933
+    },
+    {
+      "type": "node",
+      "id": 20134,
+      "lat": 20.942937304454592,
+      "lon": 72.933
+    },
+    {
+      "type": "way",
+      "id": 50040,
+      "nodes": [
+        10004,
+        20133,
+        20134
+      ],
+      "tags": {
+        "highway": "primary",
+        "name": "Civil Hospital Road",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "N"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20135,
+      "lat": 20.940781347772706,
+      "lon": 72.933
+    },
+    {
+      "type": "node",
+      "id": 20136,
+      "lat": 20.94006269554541,
+      "lon": 72.933
+    },
+    {
+      "type": "way",
+      "id": 50041,
+      "nodes": [
+        10004,
+        20135,
+        20136
+      ],
+      "tags": {
+        "highway": "primary",
+        "name": "Chhapra Road",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "S"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20137,
+      "lat": 20.9415,
+      "lon": 72.93376947955296
+    },
+    {
+      "type": "node",
+      "id": 20138,
+      "lat": 20.9415,
+      "lon": 72.93453895910592
+    },
+    {
+      "type": "way",
+      "id": 50042,
+      "nodes": [
+        10004,
+        20137,
+        20138
+      ],
+      "tags": {
+        "highway": "secondary",
+        "name": "Gandevi Road",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "E"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20139,
+      "lat": 20.9415,
+      "lon": 72.93223052044705
+    },
+    {
+      "type": "node",
+      "id": 20140,
+      "lat": 20.9415,
+      "lon": 72.93146104089409
+    },
+    {
+      "type": "way",
+      "id": 50043,
+      "nodes": [
+        10004,
+        20139,
+        20140
+      ],
+      "tags": {
+        "highway": "secondary",
+        "name": "Sayaji Library Marg",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "W"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20141,
+      "lat": 20.942375857402016,
+      "lon": 72.93215838173896
+    },
+    {
+      "type": "node",
+      "id": 20142,
+      "lat": 20.942375857402016,
+      "lon": 72.9325912139875
+    },
+    {
+      "type": "node",
+      "id": 20143,
+      "lat": 20.942061447052577,
+      "lon": 72.9325912139875
+    },
+    {
+      "type": "node",
+      "id": 20144,
+      "lat": 20.942061447052577,
+      "lon": 72.93215838173896
+    },
+    {
+      "type": "way",
+      "id": 50044,
+      "nodes": [
+        20141,
+        20142,
+        20143,
+        20144,
+        20141
+      ],
+      "tags": {
+        "building": "hospital",
+        "name": "District Civil Hospital Trauma Center",
+        "building:levels": "4",
+        "height": "14",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20145,
+      "lat": 20.942299500602868,
+      "lon": 72.93338473977649
+    },
+    {
+      "type": "node",
+      "id": 20146,
+      "lat": 20.942299500602868,
+      "lon": 72.93376947955296
+    },
+    {
+      "type": "node",
+      "id": 20147,
+      "lat": 20.941958140794902,
+      "lon": 72.93376947955296
+    },
+    {
+      "type": "node",
+      "id": 20148,
+      "lat": 20.941958140794902,
+      "lon": 72.93338473977649
+    },
+    {
+      "type": "way",
+      "id": 50045,
+      "nodes": [
+        20145,
+        20146,
+        20147,
+        20148,
+        20145
+      ],
+      "tags": {
+        "building": "civic",
+        "name": "Navsari Sub-District Court Complex",
+        "building:levels": "3",
+        "height": "10.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20149,
+      "lat": 20.941131690733513,
+      "lon": 72.93337512128207
+    },
+    {
+      "type": "node",
+      "id": 20150,
+      "lat": 20.941131690733513,
+      "lon": 72.93368291310325
+    },
+    {
+      "type": "node",
+      "id": 20151,
+      "lat": 20.940880162453958,
+      "lon": 72.93368291310325
+    },
+    {
+      "type": "node",
+      "id": 20152,
+      "lat": 20.940880162453958,
+      "lon": 72.93337512128207
+    },
+    {
+      "type": "way",
+      "id": 50046,
+      "nodes": [
+        20149,
+        20150,
+        20151,
+        20152,
+        20149
+      ],
+      "tags": {
+        "building": "civic",
+        "name": "Civic Seva Kendra & Treasury",
+        "building:levels": "3",
+        "height": "10.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20153,
+      "lat": 20.941203555956243,
+      "lon": 72.93238441635765
+    },
+    {
+      "type": "node",
+      "id": 20154,
+      "lat": 20.941203555956243,
+      "lon": 72.93265373420118
+    },
+    {
+      "type": "node",
+      "id": 20155,
+      "lat": 20.94098796028805,
+      "lon": 72.93265373420118
+    },
+    {
+      "type": "node",
+      "id": 20156,
+      "lat": 20.94098796028805,
+      "lon": 72.93238441635765
+    },
+    {
+      "type": "way",
+      "id": 50047,
+      "nodes": [
+        20153,
+        20154,
+        20155,
+        20156,
+        20153
+      ],
+      "tags": {
+        "building": "civic",
+        "name": "Junathana Police Station",
+        "building:levels": "2",
+        "height": "7",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20157,
+      "lat": 20.941958140794902,
+      "lon": 72.93205738754764
+    },
+    {
+      "type": "node",
+      "id": 20158,
+      "lat": 20.941958140794902,
+      "lon": 72.93230746840234
+    },
+    {
+      "type": "node",
+      "id": 20159,
+      "lat": 20.941760511432395,
+      "lon": 72.93230746840234
+    },
+    {
+      "type": "node",
+      "id": 20160,
+      "lat": 20.941760511432395,
+      "lon": 72.93205738754764
+    },
+    {
+      "type": "way",
+      "id": 50048,
+      "nodes": [
+        20157,
+        20158,
+        20159,
+        20160,
+        20157
+      ],
+      "tags": {
+        "building": "hospital",
+        "name": "Red Cross Blood Bank & Lab",
+        "building:levels": "2",
+        "height": "7",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20161,
+      "lat": 20.941967123947745,
+      "lon": 72.93372138708091
+    },
+    {
+      "type": "node",
+      "id": 20162,
+      "lat": 20.941967123947745,
+      "lon": 72.93400994191326
+    },
+    {
+      "type": "node",
+      "id": 20163,
+      "lat": 20.941661696751144,
+      "lon": 72.93400994191326
+    },
+    {
+      "type": "node",
+      "id": 20164,
+      "lat": 20.941661696751144,
+      "lon": 72.93372138708091
+    },
+    {
+      "type": "way",
+      "id": 50049,
+      "nodes": [
+        20161,
+        20162,
+        20163,
+        20164,
+        20161
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Lawyers Chamber Complex",
+        "building:levels": "4",
+        "height": "14",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20165,
+      "lat": 20.94094304452385,
+      "lon": 72.93220166496381
+    },
+    {
+      "type": "node",
+      "id": 20166,
+      "lat": 20.94094304452385,
+      "lon": 72.93245174581853
+    },
+    {
+      "type": "node",
+      "id": 20167,
+      "lat": 20.940709482549977,
+      "lon": 72.93245174581853
+    },
+    {
+      "type": "node",
+      "id": 20168,
+      "lat": 20.940709482549977,
+      "lon": 72.93220166496381
+    },
+    {
+      "type": "way",
+      "id": 50050,
+      "nodes": [
+        20165,
+        20166,
+        20167,
+        20168,
+        20165
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "GIDC Industrial Credit Bank",
+        "building:levels": "3",
+        "height": "10.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20169,
+      "lat": 20.940754398314184,
+      "lon": 72.93325008085472
+    },
+    {
+      "type": "node",
+      "id": 20170,
+      "lat": 20.940754398314184,
+      "lon": 72.93361558364236
+    },
+    {
+      "type": "node",
+      "id": 20171,
+      "lat": 20.940538802645992,
+      "lon": 72.93361558364236
+    },
+    {
+      "type": "node",
+      "id": 20172,
+      "lat": 20.940538802645992,
+      "lon": 72.93325008085472
+    },
+    {
+      "type": "way",
+      "id": 50051,
+      "nodes": [
+        20169,
+        20170,
+        20171,
+        20172,
+        20169
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Chhapra Road Commercial Market",
+        "building:levels": "2",
+        "height": "7",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10005,
+      "lat": 20.963,
+      "lon": 72.945,
+      "tags": {
+        "highway": "traffic_signals",
+        "name": "Grid Chokdi (Highway Link)",
+        "name:gu": "ગ્રીડ ચોકડી",
+        "junction:type": "crossroads",
+        "ref": "NMC-SIG-5"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20173,
+      "lat": 20.963718652227296,
+      "lon": 72.945
+    },
+    {
+      "type": "node",
+      "id": 20174,
+      "lat": 20.96443730445459,
+      "lon": 72.945
+    },
+    {
+      "type": "way",
+      "id": 50052,
+      "nodes": [
+        10005,
+        20173,
+        20174
+      ],
+      "tags": {
+        "highway": "primary",
+        "name": "Surat-Navsari Highway Link",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "N"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20175,
+      "lat": 20.962281347772706,
+      "lon": 72.945
+    },
+    {
+      "type": "node",
+      "id": 20176,
+      "lat": 20.96156269554541,
+      "lon": 72.945
+    },
+    {
+      "type": "way",
+      "id": 50053,
+      "nodes": [
+        10005,
+        20175,
+        20176
+      ],
+      "tags": {
+        "highway": "primary",
+        "name": "Valsad Express Corridor",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "S"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20177,
+      "lat": 20.963,
+      "lon": 72.9457695901233
+    },
+    {
+      "type": "node",
+      "id": 20178,
+      "lat": 20.963,
+      "lon": 72.94653918024662
+    },
+    {
+      "type": "way",
+      "id": 50054,
+      "nodes": [
+        10005,
+        20177,
+        20178
+      ],
+      "tags": {
+        "highway": "secondary",
+        "name": "Vansda State Highway",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "E"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20179,
+      "lat": 20.963,
+      "lon": 72.94423040987668
+    },
+    {
+      "type": "node",
+      "id": 20180,
+      "lat": 20.963,
+      "lon": 72.94346081975337
+    },
+    {
+      "type": "way",
+      "id": 50055,
+      "nodes": [
+        10005,
+        20179,
+        20180
+      ],
+      "tags": {
+        "highway": "secondary",
+        "name": "Navsari Ring Road",
+        "lanes": "2",
+        "oneway": "no",
+        "arm_direction": "W"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20181,
+      "lat": 20.96389831528412,
+      "lon": 72.94411016141991
+    },
+    {
+      "type": "node",
+      "id": 20182,
+      "lat": 20.96389831528412,
+      "lon": 72.94444685709887
+    },
+    {
+      "type": "node",
+      "id": 20183,
+      "lat": 20.963538989170473,
+      "lon": 72.94444685709887
+    },
+    {
+      "type": "node",
+      "id": 20184,
+      "lat": 20.963538989170473,
+      "lon": 72.94411016141991
+    },
+    {
+      "type": "way",
+      "id": 50056,
+      "nodes": [
+        20181,
+        20182,
+        20183,
+        20184,
+        20181
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "GETCO 220kV Grid Substation Control Room",
+        "building:levels": "2",
+        "height": "7",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20185,
+      "lat": 20.96358390493468,
+      "lon": 72.94531264598758
+    },
+    {
+      "type": "node",
+      "id": 20186,
+      "lat": 20.96358390493468,
+      "lon": 72.94555314290112
+    },
+    {
+      "type": "node",
+      "id": 20187,
+      "lat": 20.963404241877853,
+      "lon": 72.94555314290112
+    },
+    {
+      "type": "node",
+      "id": 20188,
+      "lat": 20.963404241877853,
+      "lon": 72.94531264598758
+    },
+    {
+      "type": "way",
+      "id": 50057,
+      "nodes": [
+        20185,
+        20186,
+        20187,
+        20188,
+        20185
+      ],
+      "tags": {
+        "building": "civic",
+        "name": "Highway Toll & Traffic Patrol Post",
+        "building:levels": "2",
+        "height": "7",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20189,
+      "lat": 20.962618216004252,
+      "lon": 72.94419193037051
+    },
+    {
+      "type": "node",
+      "id": 20190,
+      "lat": 20.962618216004252,
+      "lon": 72.9446536844445
+    },
+    {
+      "type": "node",
+      "id": 20191,
+      "lat": 20.96230380565481,
+      "lon": 72.9446536844445
+    },
+    {
+      "type": "node",
+      "id": 20192,
+      "lat": 20.96230380565481,
+      "lon": 72.94419193037051
+    },
+    {
+      "type": "way",
+      "id": 50058,
+      "nodes": [
+        20189,
+        20190,
+        20191,
+        20192,
+        20189
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Gujarat State Road Transport Depot",
+        "building:levels": "2",
+        "height": "7",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20193,
+      "lat": 20.962559825510784,
+      "lon": 72.94549061370361
+    },
+    {
+      "type": "node",
+      "id": 20194,
+      "lat": 20.962559825510784,
+      "lon": 72.94585616901217
+    },
+    {
+      "type": "node",
+      "id": 20195,
+      "lat": 20.962272364619864,
+      "lon": 72.94585616901217
+    },
+    {
+      "type": "node",
+      "id": 20196,
+      "lat": 20.962272364619864,
+      "lon": 72.94549061370361
+    },
+    {
+      "type": "way",
+      "id": 50059,
+      "nodes": [
+        20193,
+        20194,
+        20195,
+        20196,
+        20193
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Highway Motel & Truck Plaza",
+        "building:levels": "3",
+        "height": "10.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20197,
+      "lat": 20.963943231048326,
+      "lon": 72.94579363981467
+    },
+    {
+      "type": "node",
+      "id": 20198,
+      "lat": 20.963943231048326,
+      "lon": 72.9461303354936
+    },
+    {
+      "type": "node",
+      "id": 20199,
+      "lat": 20.96367373646309,
+      "lon": 72.9461303354936
+    },
+    {
+      "type": "node",
+      "id": 20200,
+      "lat": 20.96367373646309,
+      "lon": 72.94579363981467
+    },
+    {
+      "type": "way",
+      "id": 50060,
+      "nodes": [
+        20197,
+        20198,
+        20199,
+        20200,
+        20197
+      ],
+      "tags": {
+        "building": "school",
+        "name": "Navsari Agricultural University Farm Center",
+        "building:levels": "2",
+        "height": "7",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20201,
+      "lat": 20.963471615524163,
+      "lon": 72.94378789555577
+    },
+    {
+      "type": "node",
+      "id": 20202,
+      "lat": 20.963471615524163,
+      "lon": 72.94419193037051
+    },
+    {
+      "type": "node",
+      "id": 20203,
+      "lat": 20.96306737364631,
+      "lon": 72.94419193037051
+    },
+    {
+      "type": "node",
+      "id": 20204,
+      "lat": 20.96306737364631,
+      "lon": 72.94378789555577
+    },
+    {
+      "type": "way",
+      "id": 50061,
+      "nodes": [
+        20201,
+        20202,
+        20203,
+        20204,
+        20201
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Logistics Warehouse A",
+        "building:levels": "1",
+        "height": "3.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20205,
+      "lat": 20.96335034296081,
+      "lon": 72.94543289444435
+    },
+    {
+      "type": "node",
+      "id": 20206,
+      "lat": 20.96335034296081,
+      "lon": 72.9457214907406
+    },
+    {
+      "type": "node",
+      "id": 20207,
+      "lat": 20.963098814681253,
+      "lon": 72.9457214907406
+    },
+    {
+      "type": "node",
+      "id": 20208,
+      "lat": 20.963098814681253,
+      "lon": 72.94543289444435
+    },
+    {
+      "type": "way",
+      "id": 50062,
+      "nodes": [
+        20205,
+        20206,
+        20207,
+        20208,
+        20205
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Petroleum Service Station & Food Court",
+        "building:levels": "2",
+        "height": "7",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 20209,
+      "lat": 20.962811353790336,
+      "lon": 72.94571187086406
+    },
+    {
+      "type": "node",
+      "id": 20210,
+      "lat": 20.962811353790336,
+      "lon": 72.94592350814797
+    },
+    {
+      "type": "node",
+      "id": 20211,
+      "lat": 20.962649657039194,
+      "lon": 72.94592350814797
+    },
+    {
+      "type": "node",
+      "id": 20212,
+      "lat": 20.962649657039194,
+      "lon": 72.94571187086406
+    },
+    {
+      "type": "way",
+      "id": 50063,
+      "nodes": [
+        20209,
+        20210,
+        20211,
+        20212,
+        20209
+      ],
+      "tags": {
+        "building": "yes",
+        "name": "Highway Weighbridge Station",
+        "building:levels": "1",
+        "height": "3.5",
+        "addr:city": "Navsari",
+        "addr:state": "Gujarat"
+      }
+    }
+  ]
+}

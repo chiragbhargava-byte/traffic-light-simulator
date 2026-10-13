@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SFIC 2026 - 3D Adaptive Traffic Signal Simulator | Navsari</title>
+  <link rel="stylesheet" href="/src/ui/style.css" />
+</head>
+<body>
+  <!-- 3D Canvas Viewport -->
+  <div id="canvas-container"></div>
+
+  <!-- UI Overlay Container -->
+  <div id="app-ui">
+    <!-- Top Controls Bar -->
+    <header id="top-bar">
+      <div class="brand-section">
+        <span class="brand-badge">SFIC 2026</span>
+        <div>
+          <div class="brand-title">3D Adaptive Traffic Signal Simulator</div>
+          <div class="brand-subtitle">PS000073 • Navsari Municipal Corporation</div>
+        </div>
+      </div>
+
+      <div class="controls-group">
+        <!-- Scenario & Baseline Group -->
+        <span class="control-label">Scenario:</span>
+        <select id="scenario-select">
+          <option value="normalDay">Normal Day (Balanced 8 vpm)</option>
+          <option value="schoolMorning">School Morning (Heavy S-N + Pedestrians)</option>
+          <option value="marketPeak">Market Peak (Dense E-W 20 vpm)</option>
+          <option value="night">Night 1-2 AM (Demand Actuated)</option>
+          <option value="ambulanceEvent">Ambulance Event (Emergency Priority)</option>
+        </select>
+
+        <span class="control-label" style="margin-left: 4px;">Baseline:</span>
+        <select id="baseline-select">
+          <option value="fixed30">Fixed 4-Phase (20s per arm)</option>
+          <option value="timeOfDay">Time-of-Day (TOD) Plan</option>
+        </select>
+
+        <!-- Run All Scenarios Batch Runner placed right with Scenario group -->
+        <button id="btn-run-all" class="btn-primary" style="background: linear-gradient(135deg, #059669, #10b981); margin-left: 4px;">📊 Run All (10 Seeds)</button>
+
+        <div class="control-divider"></div>
+
+        <!-- Playback Group -->
+        <button id="btn-play-pause" class="btn-primary">Pause</button>
+        <button id="btn-reset">Reset</button>
+
+        <div class="control-divider"></div>
+
+        <!-- Speed Multipliers -->
+        <span class="control-label">Speed:</span>
+        <button class="btn-speed active" data-speed="1">1x</button>
+        <button class="btn-speed" data-speed="5">5x</button>
+        <button class="btn-speed" data-speed="20">20x</button>
+
+        <div class="control-divider"></div>
+
+        <!-- Seed Input -->
+        <span class="control-label">Seed:</span>
+        <input type="number" id="input-seed" value="42" min="1" max="99999" />
+
+        <div class="control-divider"></div>
+
+        <!-- Camera Presets -->
+        <span class="control-label">Cam:</span>
+        <button class="btn-camera" data-cam="topDown" id="cam-topdown">Top</button>
+        <button class="btn-camera active" data-cam="isometric" id="cam-iso">Iso</button>
+        <button class="btn-camera" data-cam="school" id="cam-school">School</button>
+
+        <div class="control-divider"></div>
+
+        <!-- Demo Trigger Buttons -->
+        <button id="btn-spawn-ambulance" class="btn-demo">🚨 Ambulance</button>
+        <button id="btn-block-lane" class="btn-demo">🚧 Block Lane</button>
+
+        <div class="control-divider"></div>
+
+        <!-- Camera Vision Layer (Simulated Detector) Controls -->
+        <span class="control-label">Detector:</span>
+        <select id="detector-source-select" style="font-weight: 600; border-color: rgba(6, 182, 212, 0.5);">
+          <option value="cameraDetector">📷 Simulated Detector (5% Miss, 0.2s)</option>
+          <option value="groundTruth">🟢 Ground Truth (Perfect)</option>
+        </select>
+        <button id="btn-toggle-fov" class="btn-demo active">👁️ FOV Wedges: ON</button>
+        <button id="btn-toggle-camera-feeds" class="btn-primary" style="background: linear-gradient(135deg, #0d9488, #14b8a6); font-weight: 700;">📹 Camera Feeds</button>
+
+        <div class="control-divider"></div>
+
+        <!-- Milestone 6: Navsari OpenStreetMap Context -->
+        <button id="btn-open-map" class="btn-primary" style="background: linear-gradient(135deg, #0284c7, #0ea5e9); font-weight: 700;">🗺️ Navsari OSM Map</button>
+        <div id="active-junction-badge" class="junction-indicator" title="Active Navsari Candidate Junction">
+          <span class="pulse-dot"></span>
+          <span id="active-junction-name">Fuwara Chowk</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Real Navsari OSM Road Arm Names Strip -->
+    <div id="osm-arms-strip">
+      <span style="color: #94a3b8; font-weight: 600;">📍 Navsari OSM Arms:</span>
+      <span class="osm-arm-pill"><b>⬆ N:</b> <span id="osm-arm-n">Shree Sayaji Road</span></span>
+      <span class="osm-arm-pill"><b>⬇ S:</b> <span id="osm-arm-s">Clock Tower Road</span></span>
+      <span class="osm-arm-pill"><b>➡ E:</b> <span id="osm-arm-e">Junathana Road</span></span>
+      <span class="osm-arm-pill"><b>⬅ W:</b> <span id="osm-arm-w">Station Road</span></span>
+    </div>
+
+    <!-- Live Alerts Banner (Emergency, Congestion, Obstruction) -->
+    <div id="alerts-container"></div>
+
+    <!-- Viewport Split Headers (Symmetric 3-Column Grid) -->
+    <div id="junction-labels-overlay">
+    <!-- Left Junction (Baseline) -->
+    <div class="junction-header-container left-col">
+      <div class="junction-header-badge fixed">
+        <span class="badge-tag fixed" id="baseline-badge-tag">Baseline 1</span>
+        <span class="badge-title" id="baseline-badge-title">FIXED 4-PHASE (20s per arm)</span>
+      </div>
+      <!-- Left Junction Metrics Card -->
+      <div class="metrics-card" id="left-metrics-card">
+        <div class="metric-item">
+          <span class="m-label">Avg Wait</span>
+          <span class="m-val" id="left-avg-wait">0.0s</span>
+        </div>
+        <div class="metric-item">
+          <span class="m-label">Throughput</span>
+          <span class="m-val" id="left-throughput">0</span>
+        </div>
+        <div class="metric-item">
+          <span class="m-label">Max Queue</span>
+          <span class="m-val" id="left-max-queue">0</span>
+        </div>
+        <div class="metric-item">
+          <span class="m-label">Stops/Veh</span>
+          <span class="m-val" id="left-stops">0.0</span>
+        </div>
+        <div class="metric-item">
+          <span class="m-label">Phase</span>
+          <span class="m-val active-phase" id="left-phase">N GREEN</span>
+        </div>
+      </div>
+      <!-- Left Controller Status / Plan banner -->
+      <div id="baseline-decision-banner" class="decision-sub-banner fixed-sub">
+        <span class="decision-label" style="color: var(--accent-amber);">Control strategy:</span>
+        <span id="baseline-plan-text" class="decision-content">Fixed cycle 100s: 20s N -> 20s E -> 20s S -> 20s W (+5s clearance each)</span>
+      </div>
+    </div>
+
+    <!-- Center Comparison Improvement Badge -->
+    <div id="improvement-badge-container">
+      <div class="improvement-pill" id="wait-improvement-pill">
+        <span class="pill-title">WAIT TIME REDUCTION</span>
+        <span class="pill-value" id="improvement-val">--%</span>
+      </div>
+    </div>
+
+    <!-- Right Junction (Adaptive) -->
+    <div class="junction-header-container right-col">
+      <div class="junction-header-badge adaptive">
+        <span class="badge-tag adaptive">Proposed Solution</span>
+        <span class="badge-title">AI ADAPTIVE SIGNAL (Dynamic Actuation)</span>
+      </div>
+      <!-- Right Junction Metrics Card -->
+      <div class="metrics-card adaptive-card" id="right-metrics-card">
+        <div class="metric-item">
+          <span class="m-label">Avg Wait</span>
+          <span class="m-val highlight-green" id="right-avg-wait">0.0s</span>
+        </div>
+        <div class="metric-item">
+          <span class="m-label">Throughput</span>
+          <span class="m-val" id="right-throughput">0</span>
+        </div>
+        <div class="metric-item">
+          <span class="m-label">Max Queue</span>
+          <span class="m-val" id="right-max-queue">0</span>
+        </div>
+        <div class="metric-item">
+          <span class="m-label">Stops/Veh</span>
+          <span class="m-val" id="right-stops">0.0</span>
+        </div>
+        <div class="metric-item">
+          <span class="m-label">Det. Accuracy</span>
+          <span class="m-val highlight-green" id="right-detector-acc">100%</span>
+        </div>
+        <div class="metric-item">
+          <span class="m-label">Phase</span>
+          <span class="m-val active-phase" id="right-phase">N GREEN</span>
+        </div>
+      </div>
+      <!-- Live Controller Decision Text -->
+      <div id="controller-decision-banner" class="decision-sub-banner adaptive-sub">
+        <span class="decision-label">Controller decision:</span>
+        <span id="decision-text" class="decision-content">N green 8 s = 8 + 2 x 0 queued</span>
+      </div>
+    </div>
+  </div>
+  </div> <!-- Close #app-ui -->
+
+  <!-- Bottom Status Bar -->
+  <footer id="bottom-status-bar">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span class="milestone-pill">Milestone 1 Active</span>
+      <span>Procedural Twin Junctions • Road Markings • 3-Aspect Signals • School Zone • Camera Orbit</span>
+    </div>
+
+    <div class="nav-hint">
+      <span><span class="kbd">Left Mouse</span> Orbit</span>
+      <span><span class="kbd">Right Mouse</span> Pan</span>
+      <span><span class="kbd">Scroll</span> Zoom</span>
+    </div>
+  </footer>
+
+  <!-- Batch Evaluation Progress Overlay -->
+  <div id="batch-progress-overlay" style="display: none;">
+    <div class="progress-card">
+      <div class="progress-title">⚡ Running Monte Carlo Evaluation (10 Seeds / Scenario)</div>
+      <div class="progress-subtitle">Simulating 5 Scenarios × 10 Seeds × 3 Controllers headless at 20 Hz...</div>
+      <div class="progress-bar-container">
+        <div id="batch-progress-bar"></div>
+      </div>
+      <div id="batch-progress-status">0% — Initializing...</div>
+    </div>
+  </div>
+
+  <!-- Comparison Results Modal (Chart.js + CSV / PNG Export) -->
+  <div id="results-modal" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title">📈 Simulation Results: Baseline vs Adaptive Control</div>
+          <div class="modal-subtitle">SFIC 2026 • PS000073 Navsari Municipal Corporation • 10 Seeds per Scenario (Mean & Spread)</div>
+        </div>
+        <button id="btn-close-modal" class="btn-close">✕</button>
+      </div>
+
+      <!-- Chart Container -->
+      <div class="chart-wrapper">
+        <canvas id="comparison-chart"></canvas>
+      </div>
+
+      <!-- Summary Statistics Table -->
+      <div class="table-wrapper">
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>Baseline 1: Fixed 4-Phase (Mean ± Spread)</th>
+              <th>Baseline 2: TOD Plan (Mean ± Spread)</th>
+              <th>Proposed: Adaptive (Ground Truth)</th>
+              <th>Proposed: Adaptive (Simulated Detector)</th>
+              <th>Robustness vs GT</th>
+              <th>Wait Reduction vs Fixed</th>
+            </tr>
+          </thead>
+          <tbody id="results-table-body">
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Export Actions Footer -->
+      <div class="modal-footer">
+        <div class="footer-note">
+          * Spread reported as: Mean ± Std Dev across 10 random seeds per scenario (5 simulated minutes each). Tested with Simulated Detector (5% miss rate, 0.2s latency).
+        </div>
+        <div class="footer-buttons">
+          <button id="btn-download-csv" class="btn-export">📥 Download Results as CSV</button>
+          <button id="btn-download-png" class="btn-export btn-primary">🖼️ Download Chart as PNG</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Milestone 6: 2D Leaflet & Canvas Map Modal (Real Navsari Context) -->
+  <div id="map-modal" style="display: none;">
+    <div class="map-modal-card">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title">🗺️ Real Navsari Context — OpenStreetMap Junctions</div>
+          <div class="modal-subtitle">SFIC 2026 • PS000073 Navsari Municipal Corporation • highway=traffic_signals</div>
+        </div>
+        <div class="modal-header-actions">
+          <button id="btn-map-mode-toggle" class="btn-toggle">🌐 OSM Tiles (Online)</button>
+          <button id="btn-close-map" class="btn-close">✕</button>
+        </div>
+      </div>
+
+      <div id="map-status-banner" class="map-status-banner">
+        Active: OpenStreetMap Online Tile Layer
+      </div>
+
+      <div class="map-modal-body">
+        <!-- Candidate Junctions Sidebar -->
+        <aside class="map-sidebar">
+          <div class="sidebar-header">
+            <span class="sidebar-title">Candidate Signal Junctions</span>
+            <span class="sidebar-count" id="junction-count-pill">5 Nodes</span>
+          </div>
+          <div id="map-junction-list" class="junction-card-list">
+            <!-- Populated dynamically -->
+          </div>
+        </aside>
+
+        <!-- Map Viewport -->
+        <main class="map-viewport">
+          <div id="leaflet-map-container" class="leaflet-map-host"></div>
+          <canvas id="offline-map-canvas" class="canvas-map-host" style="display: none;"></canvas>
+          <div class="osm-attribution-badge">
+            <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <!-- Collapsible PiP Camera Feeds Panel (Simulated Detector) -->
+  <div id="camera-feeds-panel" class="camera-feeds-dock" style="display: none;">
+    <div class="dock-header">
+      <div class="dock-title-group">
+        <span class="dock-badge">Simulated detector</span>
+        <span class="dock-title">CCTV Vision Feeds (4 Inbound Approaches • 10 Hz)</span>
+        <span id="pip-status-info" class="dock-status">Mode: Active Controller Source • Miss Rate: 5% • Latency: 0.2s • Simulated detector</span>
+      </div>
+      <div class="dock-actions">
+        <button id="btn-close-camera-feeds" class="btn-close-mini">✕</button>
+      </div>
+    </div>
+
+    <div class="feeds-container">
+      <canvas id="pip-webgl-canvas" class="pip-webgl-layer" width="960" height="160"></canvas>
+
+      <!-- 4 Overlaid Feed Cells for North, South, East, West -->
+      <div class="feed-cell" id="feed-cell-n">
+        <div class="feed-header-bar">
+          <span id="feed-title-n" class="feed-title">CAM N • Inbound</span>
+          <span id="feed-count-n" class="feed-count">0 queued</span>
+        </div>
+        <canvas id="feed-overlay-n" class="feed-overlay-canvas" width="240" height="160"></canvas>
+        <div class="feed-footer-bar">
+          <span id="feed-acc-n" class="feed-acc">Acc: 100%</span>
+          <span class="sim-badge">Simulated detector</span>
+        </div>
+      </div>
+
+      <div class="feed-cell" id="feed-cell-s">
+        <div class="feed-header-bar">
+          <span id="feed-title-s" class="feed-title">CAM S • Inbound</span>
+          <span id="feed-count-s" class="feed-count">0 queued</span>
+        </div>
+        <canvas id="feed-overlay-s" class="feed-overlay-canvas" width="240" height="160"></canvas>
+        <div class="feed-footer-bar">
+          <span id="feed-acc-s" class="feed-acc">Acc: 100%</span>
+          <span class="sim-badge">Simulated detector</span>
+        </div>
+      </div>
+
+      <div class="feed-cell" id="feed-cell-e">
+        <div class="feed-header-bar">
+          <span id="feed-title-e" class="feed-title">CAM E • Inbound</span>
+          <span id="feed-count-e" class="feed-count">0 queued</span>
+        </div>
+        <canvas id="feed-overlay-e" class="feed-overlay-canvas" width="240" height="160"></canvas>
+        <div class="feed-footer-bar">
+          <span id="feed-acc-e" class="feed-acc">Acc: 100%</span>
+          <span class="sim-badge">Simulated detector</span>
+        </div>
+      </div>
+
+      <div class="feed-cell" id="feed-cell-w">
+        <div class="feed-header-bar">
+          <span id="feed-title-w" class="feed-title">CAM W • Inbound</span>
+          <span id="feed-count-w" class="feed-count">0 queued</span>
+        </div>
+        <canvas id="feed-overlay-w" class="feed-overlay-canvas" width="240" height="160"></canvas>
+        <div class="feed-footer-bar">
+          <span id="feed-acc-w" class="feed-acc">Acc: 100%</span>
+          <span class="sim-badge">Simulated detector</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
